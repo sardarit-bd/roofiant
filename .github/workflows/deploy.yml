@@ -1,0 +1,60 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to VPS
+        run: |
+          ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
+          set -e
+
+          PROJECT_DIR="/var/www/roofiant.sardarit.cloud"
+
+          echo "🔐 Mark repository as safe for Git"
+          git config --global --add safe.directory $PROJECT_DIR
+
+          echo "🚀 Deploying to $PROJECT_DIR"
+          cd $PROJECT_DIR
+
+          echo "📥 Fetching latest code"
+          git fetch origin
+          git reset --hard origin/main
+
+          echo "📦 Installing PHP dependencies"
+          composer install --no-interaction --prefer-dist --optimize-autoloader
+
+          echo "📦 Installing Node dependencies"
+          npm install
+
+          echo "⚙️ Building frontend assets"
+          npm run build
+
+          echo "🔐 Fixing permissions"
+          chown -R apache:apache $PROJECT_DIR
+          chmod -R 775 storage bootstrap/cache
+
+          echo "🧹 Running Laravel optimizations"
+          php artisan migrate --force || true
+          php artisan optimize:clear
+          php artisan optimize
+
+          echo "✅ Deployment completed successfully"
+          EOF
