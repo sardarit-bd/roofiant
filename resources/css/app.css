@@ -9,3 +9,21 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+.carousel-container {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-dot {
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    width: 2rem;
+    background-color: #1e3a8a;
+}
