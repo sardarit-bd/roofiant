@@ -57,8 +57,9 @@ jobs:
           php artisan optimize
 
           echo "✅ Deployment completed successfully"
-          EOF
 
           sudo chown -R nginx:nginx storage bootstrap/cache
           sudo chmod -R 775 storage bootstrap/cache
           php artisan optimize:clear
+
+          EOF
