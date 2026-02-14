@@ -92,7 +92,7 @@
             <div class="hidden lg:block">
                 <a href="/contact"
                     class="inline-flex items-center px-6 py-2.5 bg-blue-900 text-white rounded-full hover:bg-blue-800 transition-colors font-medium">
-                    Contact Us
+                  (740) 444-4245
                     <span class="ml-2 bg-white text-blue-900 p-1 rounded-full rotate-325">
                         <svg class="w-5 h-5 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
