@@ -123,7 +123,7 @@
                         delivering exceptional craftsmanship and top-notch customer service. From minor roof repairs to
                         full replacements, we handle every job with precision and care.
                     </p>
-                    <a href="#"
+                    <a href="{{ route('services.roof-repair') }}"
                         class="inline-flex items-center gap-2 text-indigo-900 font-semibold hover:gap-3 transition-all duration-300">
                         View Details
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

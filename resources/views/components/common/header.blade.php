@@ -1,5 +1,5 @@
 <header class="bg-white shadow-lg sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 md:px-1 lg:px-1">
+    <div class="max-w-7xl mx-auto px-4 md:px-1 lg:px-0">
         <div class="flex items-center justify-between py-3">
             <!-- Logo -->
             <div class="flex-shrink-0">
@@ -26,13 +26,9 @@
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="py-2">
-                            <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">all</a>
-                            <a href="/services/roofing"
-                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Roofing</a>
-                            <a href="/services/siding"
-                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Siding</a>
-                            <a href="/services/gutters"
-                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Gutters</a>
+                            <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Roofing</a>
+                            <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Siding</a>
+                            <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Gutters</a>
                         </div>
                     </div>
                 </div>
@@ -49,11 +45,11 @@
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="py-2">
-                            <a href="/areas/location1" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Location
+                            <a href="/services/area" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Location
                                 1</a>
-                            <a href="/areas/location2" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Location
+                            <a href="/services/area" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Location
                                 2</a>
-                            <a href="/areas/location3" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Location
+                            <a href="/services/area" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Location
                                 3</a>
                         </div>
                     </div>
@@ -71,10 +67,9 @@
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="py-2">
-                            <a href="/about/company" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Company</a>
-                            <a href="/about/team" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Team</a>
-                            <a href="/about/testimonials"
-                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
+                            <a href="/about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Company</a>
+                            <a href="/about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Team</a>
+                            <a href="/about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +87,7 @@
             <div class="hidden lg:block">
                 <a href="/contact"
                     class="inline-flex items-center px-6 py-2.5 bg-blue-900 text-white rounded-full hover:bg-blue-800 transition-colors font-medium">
-                  (740) 444-4245
+                    (740) 444-4245
                     <span class="ml-2 bg-white text-blue-900 p-1 rounded-full rotate-325">
                         <svg class="w-5 h-5 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
