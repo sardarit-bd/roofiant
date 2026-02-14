@@ -58,6 +58,16 @@ jobs:
 
           echo "✅ Deployment completed successfully"
 
+          chown nginx:nginx database/database.sqlite
+          chmod 664 database/database.sqlite
+
+          chown -R nginx:nginx database
+          chmod -R 775 database
+
+
+          chown -R nginx:nginx storage bootstrap/cache
+          chmod -R 775 storage bootstrap/cache
+
           sudo chown -R nginx:nginx storage bootstrap/cache
           sudo chmod -R 775 storage bootstrap/cache
           php artisan optimize:clear
