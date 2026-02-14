@@ -58,8 +58,7 @@ jobs:
 
           echo "✅ Deployment completed successfully"
           EOF
-        - name: Fix Laravel Permissions
-    - name: Fix Laravel Permissions
+      - name: Fix Laravel Permissions
         run: |
           cd /var/www/roofiant.sardarit.cloud
           sudo chown -R nginx:nginx storage bootstrap/cache
