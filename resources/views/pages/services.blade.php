@@ -1,4 +1,4 @@
-<x-site-layout title="Home | roofiant">
+<x-site-layout title="Services | roofiant">
     <x-breadcrumb title="Services" subtitle="home > services" />
 
     @include('components.services.categories')
