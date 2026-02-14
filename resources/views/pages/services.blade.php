@@ -1,5 +1,5 @@
 <x-site-layout title="Services | roofiant">
-    <x-bread-crumb title="Services" subtitle="home > services" />
+    <x-common.bread-crumb title="Services" subtitle="home > services" />
 
     @include('components.services.categories')
     @include('components.services.choose')
