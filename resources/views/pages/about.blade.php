@@ -9,5 +9,4 @@
     @include('components.about.choose')
     @include('components.about.ready')
     @include('components.about.schedule')
-
 </x-site-layout>

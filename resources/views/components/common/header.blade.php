@@ -70,6 +70,8 @@
                             <a href="/about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Company</a>
                             <a href="/about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Team</a>
                             <a href="/about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
+                            <a href="/about/financing"
+                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Financing</a>
                         </div>
                     </div>
                 </div>

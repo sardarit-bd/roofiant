@@ -10,9 +10,15 @@ Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
 
+Route::get('/about/financing', function () {
+    return view('pages.financing');
+})->name('about.financing');
+
 Route::get('/services', function () {
     return view('pages.services');
 })->name('services');
+
+
 
 Route::get('/services/roofing-repairs', function () {
     return view('pages.roof-repair');
