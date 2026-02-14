@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Breadcrumb extends Component
+class BreadCrumb extends Component
 {
     public $title;
     public $subtitle;
@@ -19,7 +19,7 @@ class Breadcrumb extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.common.breadcrumb', [
+        return view('components.common.BreadCrumb', [
             'title' => $this->title,
             'subtitle' => $this->subtitle,
         ]);
