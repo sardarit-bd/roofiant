@@ -68,8 +68,9 @@
                         class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="py-2">
                             <a href="/about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Company</a>
-                            <a href="/about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Team</a>
-                            <a href="/about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
+                            <a href="/about/team" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Team</a>
+                            <a href="{{ route('about.testimonials') }}"
+                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
                             <a href="/about/financing"
                                 class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Financing</a>
                         </div>
