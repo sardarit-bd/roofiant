@@ -1,15 +1,15 @@
 <section class="hero relative overflow-hidden">
     <div class="inner">
         <!-- Top white space -->
-        <div class="bg-white h-60 lg:h-80"></div>
+        <div class="bg-gray-100 h-60 lg:h-90"></div>
 
         <!-- Background image -->
         <div class="relative">
-            <img class="h-60 lg:h-80 w-full object-cover object-top" src="{{ asset('images/hero.jpg') }}" alt="">
-
+            <img class="h-70 lg:h-100 w-full object-cover object-top" src="{{ asset('images/hero.jpg') }}" alt="">
+            <div class="absolute inset-0 bg-gray-800 opacity-40"></div>
             <!-- Bottom Badge -->
-            <div class="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 lg:bottom-10 lg:left-10">
-                <div class="flex items-center gap-3 bg-red-700 rounded-4xl shadow-xl px-4 py-3 sm:px-5 sm:py-4">
+            <div class="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 lg:bottom-3 lg:left-80">
+                <div class="flex items-center gap-3 bg-red-900 rounded-4xl shadow-xl px-4 py-3 sm:px-5 sm:py-4">
                     <!-- Avatar Stack -->
                     <div class="flex -space-x-2">
                         <img src="https://i.pravatar.cc/150?img=1" alt="Client"

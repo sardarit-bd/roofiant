@@ -113,4 +113,9 @@
             </p>
         </div>
     </div>
+
+    {{-- back to top button --}}
+    <button id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </footer>
