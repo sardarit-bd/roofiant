@@ -26,6 +26,8 @@
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="py-2">
+                            <a href="/products" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                                Products</a>
                             <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Roofing</a>
                             <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Siding</a>
                             <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Gutters</a>
@@ -128,6 +130,7 @@
                     </svg>
                 </button>
                 <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                    <a href="/products" class="block text-gray-600 hover:text-blue-900 py-1">Products</a>
                     <a href="/services/roofing" class="block text-gray-600 hover:text-blue-900 py-1">Roofing</a>
                     <a href="/services/siding" class="block text-gray-600 hover:text-blue-900 py-1">Siding</a>
                     <a href="/services/gutters" class="block text-gray-600 hover:text-blue-900 py-1">Gutters</a>

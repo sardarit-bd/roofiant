@@ -1,5 +1,5 @@
 <x-site-layout title="Feedback | roofiant">
-    <x-common.bread-crumb title="Our five star feedback" subtitle="Home > About > Financing" />
+    <x-common.bread-crumb title="Our five star feedback" subtitle="Home > About > Feedback" />
     {{-- content start here --}}
     <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div class="max-w-7xl mx-auto">
