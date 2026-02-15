@@ -80,7 +80,7 @@
                     Projects
                 </a>
 
-                <a href="/blog" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">
+                <a href="/blogs" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">
                     Blog
                 </a>
             </nav>
