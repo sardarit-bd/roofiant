@@ -26,8 +26,6 @@
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="py-2">
-                            <a href="/products" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                                Products</a>
                             <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Roofing</a>
                             <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Siding</a>
                             <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Gutters</a>
@@ -69,6 +67,8 @@
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="py-2">
+
+                            <a href="/products" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">product</a>
                             <a href="/about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Company</a>
                             <a href="/about/team" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Team</a>
                             <a href="{{ route('about.testimonials') }}"
@@ -78,10 +78,6 @@
                         </div>
                     </div>
                 </div>
-
-                <a href="/projects" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">
-                    Projects
-                </a>
 
                 <a href="/blogs" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">
                     Homeowener Article
@@ -167,6 +163,7 @@
                     </svg>
                 </button>
                 <div class="mobile-dropdown-content hidden pl-4 space-y-2 mt-2">
+                    <a href="/products" class="block text-gray-600 hover:text-blue-900 py-1">products</a>
                     <a href="/about/company" class="block text-gray-600 hover:text-blue-900 py-1">Company</a>
                     <a href="/about/team" class="block text-gray-600 hover:text-blue-900 py-1">Team</a>
                     <a href="/about/testimonials"
