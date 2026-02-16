@@ -338,20 +338,21 @@
                             <h3 class="text-xl font-bold mb-2">Need Help Call Here</h3>
                             <a href="tel:7404444245" class="text-2xl font-bold mb-6 block">(740) 444-4245</a>
                             <a href="#"
-                                class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-lg transition-colors shadow-lg">
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-lg transition-colors shadow-lg">
                                 GET A QUOTE
                             </a>
                         </div>
                         <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-800 rounded-full opacity-50">
                         </div>
                         <button
-                            class="absolute top-4 right-4 w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                            class="absolute top-4 right-4 w-12 h-12 bg-red-800 rounded-full flex items-center justify-center shadow-lg hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-400">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
+                                    d="M3 5.25a2.25 2.25 0 012.25-2.25h2.25c.621 0 1.18.276 1.555.724l1.47 1.764a1.125 1.125 0 01-.128 1.585l-1.293 1.293a15.042 15.042 0 006.586 6.586l1.293-1.293a1.125 1.125 0 011.585-.128l1.764 1.47c.448.374.724.934.724 1.555v2.25A2.25 2.25 0 0118.75 21H18c-8.284 0-15-6.716-15-15v-.75z" />
                             </svg>
                         </button>
+
                     </div>
 
                     <!-- Project Details Card -->
