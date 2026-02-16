@@ -1,5 +1,5 @@
 <section class="relative py-12 sm:py-16 lg:py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
 
         <div class="relative flex flex-col lg:flex-row items-center w-full mx-auto">
 
@@ -27,7 +27,7 @@
                 </div>
 
                 <!-- Card -->
-                <div class="bg-white p-8 sm:p-10 lg:p-12 shadow-2xl max-w-5xl ml-[-1px]">
+                <div class="bg-white p-8 sm:p-10 lg:p-12 shadow-2xl ml-[-1px]">
 
                     <!-- Heading -->
                     <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight">
