@@ -76,7 +76,7 @@
                         </span>
                     </div>
                     <img src="{{ asset('images/about/ready (2).png') }}" alt="Before roof transformation"
-                        class="w-full h-auto object-cover">
+                        class="w-full h-65 object-cover">
                 </div>
 
                 <!-- After Image -->
@@ -87,7 +87,7 @@
                         </span>
                     </div>
                     <img src="{{ asset('images/about/ready (1).png') }}" alt="After roof transformation"
-                        class="w-full h-auto object-cover">
+                        class="w-full h-65 object-cover">
                 </div>
             </div>
         </div>
