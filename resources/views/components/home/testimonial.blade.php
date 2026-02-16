@@ -445,7 +445,7 @@
             for (let i = 0; i <= maxPageIndex; i++) {
                 dotsHtml.push(
                     `<button class="carousel-dot w-2 h-2 rounded-full ${i === currentPage ? 'bg-blue-900' : 'bg-gray-300'}" data-index="${i}"></button>`
-                    );
+                );
             }
             dotsContainer.innerHTML = dotsHtml.join('');
 

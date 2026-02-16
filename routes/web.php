@@ -1,6 +1,30 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/dashboard', function () {
+    return view('dashboard.dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
 
 /*
 |--------------------------------------------------------------------------
@@ -54,9 +78,7 @@ Route::prefix('about')->name('about.')->group(function () {
 */
 Route::prefix('blogs')->name('blogs.')->group(function () {
 
-    Route::get('/', function () {
-        return view('pages.blogs.index');
-    })->name('index');
+    Route::get('/', [BlogController::class,'index'])->name('index');
 
     Route::get('/details', function () {
         return view('pages.blogs.details');
@@ -94,3 +116,5 @@ Route::prefix('services')->name('services.')->group(function () {
         return view('pages.service-area');
     })->name('service-area');
 });
+
+require __DIR__.'/auth.php';
