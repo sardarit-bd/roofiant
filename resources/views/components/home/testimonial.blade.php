@@ -3,7 +3,7 @@
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
                 <!-- Left Column - Team Image -->
-                <div class="order-2 lg:order-1">
+                <div class="order-2 lg:order-1 hidden lg:block">
                     <div class="rounded-3xl overflow-hidden shadow-2xl h-full min-h-[400px] lg:min-h-[620px]">
                         <img src="{{ asset('images/team.jpg') }}" alt="Happy Team"
                             class="w-full h-full lg:min-h-[620px] object-cover object-center">
@@ -60,7 +60,7 @@
                             class="carousel-container flex gap-2 sm:gap-2 transition-transform duration-500 ease-out">
 
                             <!-- Review Card 1 -->
-                            <div class="flex-shrink-0 w-[calc(100%/2-0.5rem)] sm:w-[calc(100%/2-0.5rem)]">
+                            <div class="flex-shrink-1  lg:w-1/2">
 
                                 <div
                                     class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow">
@@ -126,7 +126,7 @@
                             </div>
 
                             <!-- Review Card 2 -->
-                            <div class="flex-shrink-0 w-[calc(100%/2-0.5rem)] sm:w-[calc(100%/2-0.5rem)]">
+                            <div class="flex-shrink-1  lg:w-1/2">
                                 <div
                                     class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow">
                                     <!-- Stars and Google -->
@@ -191,7 +191,7 @@
                             </div>
 
                             <!-- Review Card 3 -->
-                            <div class="flex-shrink-0 w-[calc(100%/2-0.5rem)] sm:w-[calc(100%/2-0.5rem)]">
+                            <div class="flex-shrink-1 lg:w-1/2">
                                 <div
                                     class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow">
                                     <!-- Stars and Google -->
@@ -256,7 +256,7 @@
                             </div>
 
                             <!-- Review Card 3 -->
-                            <div class="flex-shrink-0 w-[calc(100%/2-0.5rem)] sm:w-[calc(100%/2-0.5rem)]">
+                            <div class="flex-shrink-1 lg:w-1/2">
                                 <div
                                     class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow">
                                     <!-- Stars and Google -->
@@ -321,7 +321,7 @@
                             </div>
 
                             <!-- Review Card 3 -->
-                            <div class="flex-shrink-0 w-[calc(100%/2)] sm:w-[calc(100%/2)]">
+                            <div class="flex-shrink-1 lg:w-1/2">
                                 <div
                                     class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow">
                                     <!-- Stars and Google -->

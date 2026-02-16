@@ -38,29 +38,29 @@
         </div>
 
         <!-- Process Steps Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
 
             <!-- Step 1 -->
             <div class="group relative">
                 <div
-                    class="relative bg-blue-900/40 backdrop-blur-md border border-white/20 rounded-2xl lg:rounded-3xl p-6 sm:p-8 hover:bg-blue-900/50 transition-all duration-300 h-full">
+                    class="relative bg-blue-900/40 backdrop-blur-md border border-white/20 rounded-2xl lg:rounded-3xl p-6 sm:p-8 hover:bg-blue-900/50 transition-all duration-300 h-full text-center">
                     <!-- Large Step Number -->
                     <div
-                        class="absolute top-6 right-6 text-6xl sm:text-7xl lg:text-8xl font-black text-white/10 leading-none">
+                        class="absolute top-6 right-23 text-6xl sm:text-7xl lg:text-8xl font-black text-white/10 leading-none">
                         01
                     </div>
 
                     <!-- Step Label -->
                     <div class="relative mb-6">
                         <span
-                            class="inline-block text-white text-sm sm:text-base font-semibold px-4 py-1.5 bg-white/20 rounded-full border border-white/30">
+                            class="inline-block text-white text-sm sm:text-base font-semibold px-4 py-1.5 mt-7">
                             Step
                         </span>
                     </div>
 
                     <!-- Icon -->
                     <div
-                        class="relative w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
+                        class="relative w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg text-center mx-auto">
                         <svg class="w-7 h-7 sm:w-8 sm:h-8 text-blue-900" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -83,24 +83,24 @@
             <!-- Step 2 -->
             <div class="group relative">
                 <div
-                    class="relative bg-blue-900/40 backdrop-blur-md border border-white/20 rounded-2xl lg:rounded-3xl p-6 sm:p-8 hover:bg-blue-900/50 transition-all duration-300 h-full">
+                    class="relative bg-blue-900/40 backdrop-blur-md border border-white/20 rounded-2xl lg:rounded-3xl p-6 sm:p-8 hover:bg-blue-900/50 transition-all duration-300 h-full text-center">
                     <!-- Large Step Number -->
                     <div
-                        class="absolute top-6 right-6 text-6xl sm:text-7xl lg:text-8xl font-black text-white/10 leading-none">
+                        class="absolute top-6 right-21 text-6xl sm:text-7xl lg:text-8xl font-black text-white/10 leading-none">
                         02
                     </div>
 
                     <!-- Step Label -->
                     <div class="relative mb-6">
                         <span
-                            class="inline-block text-white text-sm sm:text-base font-semibold px-4 py-1.5 bg-white/20 rounded-full border border-white/30">
+                            class="inline-block text-white text-sm sm:text-base font-semibold px-4 py-1.5 mt-7">
                             Step
                         </span>
                     </div>
 
                     <!-- Icon -->
                     <div
-                        class="relative w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
+                        class="relative w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg text-center mx-auto">
                         <svg class="w-7 h-7 sm:w-8 sm:h-8 text-blue-900" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -126,21 +126,21 @@
                     class="relative bg-blue-900/40 backdrop-blur-md border border-white/20 rounded-2xl lg:rounded-3xl p-6 sm:p-8 hover:bg-blue-900/50 transition-all duration-300 h-full">
                     <!-- Large Step Number -->
                     <div
-                        class="absolute top-6 right-6 text-6xl sm:text-7xl lg:text-8xl font-black text-white/10 leading-none">
+                        class="absolute top-6 right-22 text-6xl sm:text-7xl lg:text-8xl font-black text-white/10 leading-none">
                         03
                     </div>
 
                     <!-- Step Label -->
                     <div class="relative mb-6">
                         <span
-                            class="inline-block text-white text-sm sm:text-base font-semibold px-4 py-1.5 bg-white/20 rounded-full border border-white/30">
+                            class="inline-block text-white text-sm sm:text-base font-semibold px-4 py-1.5 mt-7">
                             Step
                         </span>
                     </div>
 
                     <!-- Icon -->
                     <div
-                        class="relative w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
+                        class="relative w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg text-center mx-auto">
                         <svg class="w-7 h-7 sm:w-8 sm:h-8 text-blue-900" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -166,21 +166,21 @@
                     class="relative bg-blue-900/40 backdrop-blur-md border border-white/20 rounded-2xl lg:rounded-3xl p-6 sm:p-8 hover:bg-blue-900/50 transition-all duration-300 h-full">
                     <!-- Large Step Number -->
                     <div
-                        class="absolute top-6 right-6 text-6xl sm:text-7xl lg:text-8xl font-black text-white/10 leading-none">
+                        class="absolute top-6 right-22 text-6xl sm:text-7xl lg:text-8xl font-black text-white/10 leading-none">
                         04
                     </div>
 
                     <!-- Step Label -->
                     <div class="relative mb-6">
                         <span
-                            class="inline-block text-white text-sm sm:text-base font-semibold px-4 py-1.5 bg-white/20 rounded-full border border-white/30">
+                            class="inline-block text-white text-sm sm:text-base font-semibold px-4 py-1.5 mt-7">
                             Step
                         </span>
                     </div>
 
                     <!-- Icon -->
                     <div
-                        class="relative w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
+                        class="relative w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg text-center mx-auto">
                         <svg class="w-7 h-7 sm:w-8 sm:h-8 text-blue-900" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
