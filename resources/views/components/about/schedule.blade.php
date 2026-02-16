@@ -1,6 +1,6 @@
 <div
     class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-900 py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl w-full">
+    <div class="max-w-7xl w-full">
         {{-- Header Section --}}
         <div class="text-center mb-8">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">
@@ -12,7 +12,7 @@
         </div>
 
         {{-- Form Card --}}
-        <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-10">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-10 max-w-3xl mx-auto">
             <form action="#" method="POST" class="space-y-6">
                 @csrf
 
