@@ -84,16 +84,16 @@
                 </a>
 
                 <a href="/blogs" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">
-                    Blog
+                    Homeowener Article
                 </a>
             </nav>
 
             <!-- Contact Button (Desktop) -->
             <div class="hidden lg:block">
                 <a href="/contact"
-                    class="inline-flex items-center px-6 py-2.5 bg-blue-900 text-white rounded-full hover:bg-blue-800 transition-colors font-medium">
+                    class="relative inline-flex items-center px-6 py-2.5 bg-blue-900 text-white rounded-full hover:bg-blue-800 transition-colors font-medium headbtn">
                     (740) 444-4245
-                    <span class="ml-2 bg-white text-blue-900 p-1 rounded-full rotate-325">
+                    <span class="ml-2 bg-white text-blue-900 p-1 rounded-full rotate-325 absolute right-2">
                         <svg class="w-5 h-5 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
