@@ -5,7 +5,7 @@
                 <!-- Left Column - Team Image -->
                 <div class="order-2 lg:order-1 hidden lg:block">
                     <div class="rounded-3xl overflow-hidden shadow-2xl h-full min-h-[400px] lg:min-h-[620px]">
-                        <img src="{{ asset('images/team.jpg') }}" alt="Happy Team"
+                        <img src="/images/team.jpg" alt="Happy Team"
                             class="w-full h-full lg:min-h-[620px] object-cover object-center">
                     </div>
                 </div>
@@ -54,16 +54,15 @@
                     </div>
 
                     <!-- Carousel Container -->
-                    <div class="relative overflow-hidden">
+                    <div class="relative overflow-hidden lg:w-full mx-auto max-w-[90vw]">
                         <!-- Reviews Carousel - Shows 3 cards at once -->
-                        <div id="reviewsCarousel"
-                            class="carousel-container flex gap-2 sm:gap-2 transition-transform duration-500 ease-out">
+                        <div id="reviewsCarousel" class="flex transition-transform duration-500 ease-out">
 
                             <!-- Review Card 1 -->
-                            <div class="flex-shrink-1  lg:w-1/2">
+                            <div class="w-full lg:w-[calc(50%-0.5rem)] lg:mr-2 flex-shrink-0">
 
-                                <div
-                                    class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                                <div class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8">
+                                    <!-- shadow-lg hover:shadow-xl transition-shadow -->
                                     <!-- Stars and Google -->
                                     <div class="flex items-center justify-between mb-3 sm:mb-4">
                                         <div class="flex gap-0.5 sm:gap-1">
@@ -126,9 +125,8 @@
                             </div>
 
                             <!-- Review Card 2 -->
-                            <div class="flex-shrink-1  lg:w-1/2">
-                                <div
-                                    class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-full lg:w-[calc(50%-0.5rem)] lg:mr-2 flex-shrink-0">
+                                <div class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8">
                                     <!-- Stars and Google -->
                                     <div class="flex items-center justify-between mb-3 sm:mb-4">
                                         <div class="flex gap-0.5 sm:gap-1">
@@ -191,9 +189,8 @@
                             </div>
 
                             <!-- Review Card 3 -->
-                            <div class="flex-shrink-1 lg:w-1/2">
-                                <div
-                                    class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="w-full lg:w-[calc(50%-0.5rem)] lg:mr-2 flex-shrink-0">
+                                <div class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8">
                                     <!-- Stars and Google -->
                                     <div class="flex items-center justify-between mb-3 sm:mb-4">
                                         <div class="flex gap-0.5 sm:gap-1">
@@ -255,10 +252,10 @@
                                 </div>
                             </div>
 
-                            <!-- Review Card 3 -->
-                            <div class="flex-shrink-1 lg:w-1/2">
-                                <div
-                                    class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <!-- Review Card 1 -->
+                            <div class="w-full lg:w-[calc(50%-0.5rem)] lg:mr-2 flex-shrink-0">
+
+                                <div class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8">
                                     <!-- Stars and Google -->
                                     <div class="flex items-center justify-between mb-3 sm:mb-4">
                                         <div class="flex gap-0.5 sm:gap-1">
@@ -302,28 +299,27 @@
 
                                     <!-- Review Text -->
                                     <p class="text-gray-700 text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed">
-                                        "Professional, reliable, and excellent quality work. Couldn't be happier with
-                                        the results!"
+                                        "After a storm damaged our roof, Roofiant responded immediately. Highly
+                                        recommend!"
                                     </p>
 
                                     <!-- Reviewer Info -->
                                     <div class="flex items-center gap-2 sm:gap-3">
                                         <div
-                                            class="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">
-                                            R
+                                            class="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-blue-900 flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">
+                                            M
                                         </div>
                                         <div>
-                                            <p class="font-bold text-gray-900 text-sm sm:text-base">Robert Williams</p>
-                                            <p class="text-gray-500 text-xs sm:text-sm">2 weeks ago</p>
+                                            <p class="font-bold text-gray-900 text-sm sm:text-base">Michael Chen</p>
+                                            <p class="text-gray-500 text-xs sm:text-sm">1 week ago</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Review Card 3 -->
-                            <div class="flex-shrink-1 lg:w-1/2">
-                                <div
-                                    class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <!-- Review Card 2 -->
+                            <div class="w-full lg:w-[calc(50%-0.5rem)] lg:mr-2 flex-shrink-0">
+                                <div class="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8">
                                     <!-- Stars and Google -->
                                     <div class="flex items-center justify-between mb-3 sm:mb-4">
                                         <div class="flex gap-0.5 sm:gap-1">
@@ -367,61 +363,62 @@
 
                                     <!-- Review Text -->
                                     <p class="text-gray-700 text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed">
-                                        "Professional, reliable, and excellent quality work. Couldn't be happier with
-                                        the results!"
+                                        "Exceptional service from start to finish! The Roofiant team replaced our entire
+                                        roof."
                                     </p>
 
                                     <!-- Reviewer Info -->
                                     <div class="flex items-center gap-2 sm:gap-3">
                                         <div
-                                            class="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">
-                                            R
+                                            class="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-red-700 flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">
+                                            S
                                         </div>
                                         <div>
-                                            <p class="font-bold text-gray-900 text-sm sm:text-base">Robert Williams</p>
-                                            <p class="text-gray-500 text-xs sm:text-sm">2 weeks ago</p>
+                                            <p class="font-bold text-gray-900 text-sm sm:text-base">Sarah Johnson</p>
+                                            <p class="text-gray-500 text-xs sm:text-sm">1 week ago</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
-                        <!-- Navigation Controls -->
-                        <div class="flex items-center justify-between mt-6 sm:mt-8">
-                            <!-- Left Arrow -->
-                            <button id="prevBtn"
-                                class="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-900 hover:bg-blue-900 hover:text-white transition-all flex-shrink-0">
-                                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 19l-7-7 7-7" />
-                                </svg>
-                            </button>
-
-                            <!-- Dots -->
-                            <div class="flex gap-1.5 sm:gap-2">
-                                <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300 active"
-                                    data-index="0"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300" data-index="1"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300" data-index="2"></button>
-                            </div>
-
-                            <!-- Right Arrow -->
-                            <button id="nextBtn"
-                                class="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center bg-blue-900 text-white hover:bg-blue-800 transition-all shadow-lg flex-shrink-0">
-                                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </button>
-                        </div>
                     </div>
 
+                    <!-- Navigation Controls -->
+                    <div class="flex items-center justify-between mt-6 sm:mt-8 lg:w-full max-w-[85vw] mx-auto">
+                        <!-- Left Arrow -->
+                        <button id="prevBtn"
+                            class="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-900 hover:bg-blue-900 hover:text-white transition-all flex-shrink-0">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Dots -->
+                        <div class="flex gap-1.5 sm:gap-2">
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300 active"
+                                data-index="0"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300" data-index="1"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300" data-index="2"></button>
+                        </div>
+
+                        <!-- Right Arrow -->
+                        <button id="nextBtn"
+                            class="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center bg-blue-900 text-white hover:bg-blue-800 transition-all shadow-lg flex-shrink-0">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
             </div>
+
+        </div>
         </div>
     </section>
 
@@ -429,24 +426,55 @@
         const carousel = document.getElementById('reviewsCarousel');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
-        const dots = document.querySelectorAll('.carousel-dot');
-        let currentIndex = 0;
+        const dotsContainer = document.querySelector('.flex.gap-1\\.5'); // The dots container
+        const cards = document.querySelectorAll('#reviewsCarousel > div');
+        const totalCards = cards.length;
+
+        // Function to get visible cards based on screen width
+        function getVisibleCards() {
+            return window.innerWidth >= 1024 ? 2 : 1; // lg breakpoint
+        }
+
+        let visibleCards = getVisibleCards();
+        let maxPageIndex = Math.ceil(totalCards / visibleCards) - 1;
+        let currentPage = 0;
+
+        // Create dots dynamically
+        function createDots() {
+            const dotsHtml = [];
+            for (let i = 0; i <= maxPageIndex; i++) {
+                dotsHtml.push(
+                    `<button class="carousel-dot w-2 h-2 rounded-full ${i === currentPage ? 'bg-blue-900' : 'bg-gray-300'}" data-index="${i}"></button>`
+                    );
+            }
+            dotsContainer.innerHTML = dotsHtml.join('');
+
+            // Re-attach event listeners to new dots
+            document.querySelectorAll('.carousel-dot').forEach(dot => {
+                dot.addEventListener('click', () => {
+                    currentPage = parseInt(dot.dataset.index);
+                    updateCarousel();
+                });
+            });
+        }
 
         function updateCarousel() {
-            // Use transform for smooth sliding
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            // Update transform - each page shows 'visibleCards' cards
+            carousel.style.transform = `translateX(-${currentPage * 100}%)`;
 
             // Update dots
-            dots.forEach((dot, index) => {
-                if (index === currentIndex) {
-                    dot.classList.add('active');
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                if (index === currentPage) {
+                    dot.classList.remove('bg-gray-300');
+                    dot.classList.add('bg-blue-900');
                 } else {
-                    dot.classList.remove('active');
+                    dot.classList.remove('bg-blue-900');
+                    dot.classList.add('bg-gray-300');
                 }
             });
 
             // Update button styles
-            if (currentIndex === 0) {
+            if (currentPage === 0) {
                 prevBtn.classList.remove('bg-blue-900', 'text-white');
                 prevBtn.classList.add('border-gray-300');
             } else {
@@ -454,7 +482,7 @@
                 prevBtn.classList.remove('border-gray-300');
             }
 
-            if (currentIndex === 2) {
+            if (currentPage >= maxPageIndex) {
                 nextBtn.classList.remove('bg-blue-900', 'text-white');
                 nextBtn.classList.add('border-gray-300');
             } else {
@@ -463,46 +491,73 @@
             }
         }
 
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            const newVisibleCards = getVisibleCards();
+            if (newVisibleCards !== visibleCards) {
+                visibleCards = newVisibleCards;
+                maxPageIndex = Math.ceil(totalCards / visibleCards) - 1;
+
+                // Adjust current page if out of bounds
+                if (currentPage > maxPageIndex) {
+                    currentPage = maxPageIndex;
+                }
+
+                createDots();
+                updateCarousel();
+            }
+        });
+
+        // Event listeners
         nextBtn.addEventListener('click', () => {
-            if (currentIndex < 2) {
-                currentIndex++;
+            if (currentPage < maxPageIndex) {
+                currentPage++;
                 updateCarousel();
             }
         });
 
         prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
+            if (currentPage > 0) {
+                currentPage--;
                 updateCarousel();
             }
         });
 
-        dots.forEach((dot) => {
-            dot.addEventListener('click', () => {
-                currentIndex = parseInt(dot.dataset.index);
-                updateCarousel();
-            });
-        });
-
-        // Touch support for mobile
+        // Touch support
         let touchStartX = 0;
-        let touchEndX = 0;
-
         carousel.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
+        }, {
+            passive: true
         });
 
         carousel.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            if (touchStartX - touchEndX > 50 && currentIndex < 2) {
-                currentIndex++;
+            const touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            console.log(diff)
+
+            if (diff > 50 && currentPage < maxPageIndex) {
+                currentPage++;
                 updateCarousel();
-            } else if (touchEndX - touchStartX > 50 && currentIndex > 0) {
-                currentIndex--;
+            } else if (diff < -50 && currentPage > 0) {
+                currentPage--;
                 updateCarousel();
             }
         });
 
-        // Initialize carousel
+        // Initialize
+        createDots();
         updateCarousel();
     </script>
+
+    <style>
+        /* Ensure carousel container hides overflow */
+        .overflow-hidden {
+            overflow: hidden !important;
+        }
+
+        /* Smooth transitions */
+        #reviewsCarousel {
+            will-change: transform;
+        }
+    </style>
