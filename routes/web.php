@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AreaController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,17 +16,41 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::middleware(['auth', 'verified'])->prefix('dashboards')->group(function () {
 
-Route::get('/dashboard', function () {
-    return view('dashboard.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    Route::get('/', [DashboardController::class, 'index'])
+        ->name('dashboard');
+
+    Route::prefix('blogs')->group(function () {
+        Route::get('/', [BlogController::class, 'myblog'])
+            ->name('admin.blog.index');
+        Route::get('/create', [BlogController::class, 'create'])
+            ->name('admin.blog.create');
+        Route::post('/create', [BlogController::class, 'store'])
+            ->name('blogs.store');
+    });
+
+    Route::prefix('areas')->group(function () {
+        Route::get('/', [AreaController::class, 'index'])
+            ->name('admin.area.index');
+
+        Route::get('/create', [AreaController::class, 'create'])
+            ->name('areas.create');
+
+        Route::post('/create', [AreaController::class, 'store'])
+            ->name('areas.store');
+
+            Route::post('/delete', [AreaController::class, 'destroy'])
+            ->name('areas.destroy');
+    });
+
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +104,7 @@ Route::prefix('about')->name('about.')->group(function () {
 */
 Route::prefix('blogs')->name('blogs.')->group(function () {
 
-    Route::get('/', [BlogController::class,'index'])->name('index');
+    Route::get('/', [BlogController::class, 'index'])->name('index');
 
     Route::get('/details', function () {
         return view('pages.blogs.details');

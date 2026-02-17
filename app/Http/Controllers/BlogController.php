@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str; // for slug generation
-use Illuminate\Support\Facades\Auth; // to get logged-in user
+use Illuminate\Support\Facades\Auth; // for slug generation
+use Illuminate\Support\Str; // to get logged-in user
 
 class BlogController extends Controller
 {
@@ -13,13 +14,23 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::with('user')->get(); // include user info
+
         return view('pages.blogs.index', compact('blogs'));
+    }
+
+    public function myblog()
+    {
+        $blogs = Blog::paginate(20);
+
+        return view('dashboard.blogs.index', compact('blogs'));
     }
 
     // Show the form to create a new blog
     public function create()
     {
-        return view('pages.blogs.create');
+        $users = User::all();
+
+        return view('dashboard.blogs.create', compact('users'));
     }
 
     // Store a new blog
@@ -89,6 +100,7 @@ class BlogController extends Controller
     public function destroy(Blog $blog)
     {
         $blog->delete();
+
         return redirect()->route('blogs.index')->with('success', 'Blog deleted successfully.');
     }
 }
