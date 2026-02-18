@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
     <link rel="stylesheet" href="{{ asset('css/mycss.css') }}">
 </head>
-
+{{-- body  --}}
 <body>
     <div class="flex h-screen bg-gray-50">
         <!-- Desktop sidebar -->
