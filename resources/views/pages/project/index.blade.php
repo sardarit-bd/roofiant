@@ -61,7 +61,7 @@
                             Roof Replacement
                         </span>
                     </div>
-                    <a href="/projects/details">
+                    <a href="/project/details">
                         <div class="p-5">
                             <h3 class="text-lg font-bold text-gray-900 mb-2">
                                 Complete Roof Replacement

@@ -26,7 +26,7 @@
                     <div
                         class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="py-2">
-                            <a href="/projects" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Projects</a>
+                            <a href="{{ route('project.index') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Projects</a>
                             <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Roofing</a>
                             <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Siding</a>
                             <a href="/services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Gutters</a>
@@ -172,7 +172,7 @@
                 </div>
             </div>
 
-            <a href="/projects" class="block text-gray-700 hover:text-blue-900 font-medium py-2">
+            <a href="{{ route('project.index') }}" class="block text-gray-700 hover:text-blue-900 font-medium py-2">
                 Projects
             </a>
 

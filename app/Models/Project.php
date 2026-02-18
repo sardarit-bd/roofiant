@@ -31,6 +31,11 @@ class Project extends Model
 
     public function services()
     {
-        return $this->belongsToMany(Service::class);
+        return $this->belongsToMany(
+            Service::class,
+            'project_services',
+            'project_id',
+            'service_id'
+        );
     }
 }

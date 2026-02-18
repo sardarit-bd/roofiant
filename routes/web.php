@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\AreaController;
+use App\Http\Controllers\AreaserviceController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,9 +43,18 @@ Route::middleware(['auth', 'verified'])->prefix('dashboards')->group(function ()
         Route::post('/create', [AreaController::class, 'store'])
             ->name('areas.store');
 
-            Route::post('/delete', [AreaController::class, 'destroy'])
+        Route::post('/delete', [AreaController::class, 'destroy'])
             ->name('areas.destroy');
     });
+
+    Route::resource('services', ServiceController::class);
+    Route::resource('area-services', AreaserviceController::class);
+    // Projects Resource
+    Route::resource('projects', ProjectController::class);
+
+    // Delete single project image
+    Route::delete('project-images/{image}', [ProjectController::class, 'deleteImage'])
+        ->name('project-images.destroy');
 
 });
 
@@ -116,7 +128,7 @@ Route::prefix('blogs')->name('blogs.')->group(function () {
 | Projects Section
 |--------------------------------------------------------------------------
 */
-Route::prefix('projects')->name('projects.')->group(function () {
+Route::prefix('project')->name('project.')->group(function () {
 
     Route::get('/', function () {
         return view('pages.project.index');

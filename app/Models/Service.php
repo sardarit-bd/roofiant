@@ -19,7 +19,12 @@ class Service extends Model
 
     public function projects()
     {
-        return $this->belongsToMany(Project::class);
+        return $this->belongsToMany(
+            Project::class,
+            'project_services',
+            'service_id',
+            'project_id'
+        );
     }
 
     public function projectServices()
@@ -29,8 +34,14 @@ class Service extends Model
 
     public function areas()
     {
-        return $this->belongsToMany(Area::class);
+        return $this->belongsToMany(
+            Area::class,
+            'area_services',
+            'service_id',
+            'area_id'
+        );
     }
+
 
     public function areaServices()
     {
