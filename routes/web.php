@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -154,5 +155,30 @@ Route::prefix('services')->name('services.')->group(function () {
         return view('pages.service-area');
     })->name('service-area');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Team Section
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware(['auth'])->prefix('dashboard')->group(function () {
+
+    // Teams & Categories Management
+    Route::get('/teams', [TeamController::class, 'index'])->name('teams.index');
+
+    // Category Routes
+    Route::post('/team-categories', [TeamController::class, 'storeCategory'])->name('team.categories.store');
+    Route::put('/team-categories/{category}', [TeamController::class, 'updateCategory'])->name('team.categories.update');
+    Route::delete('/team-categories/{category}', [TeamController::class, 'destroyCategory'])->name('team.categories.destroy');
+
+    // Team Routes
+    Route::post('/teams', [TeamController::class, 'storeTeam'])->name('teams.store');
+    Route::put('/teams/{team}', [TeamController::class, 'updateTeam'])->name('teams.update');
+    Route::delete('/teams/{team}', [TeamController::class, 'destroyTeam'])->name('teams.destroy');
+
+});
+
+
 
 require __DIR__.'/auth.php';
