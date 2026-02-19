@@ -238,7 +238,7 @@
                 </div>
 
                 <!-- Financing CTA Box -->
-                <div class="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl px-8 text-center shadow-xl py-26">
+                <div class="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl px-8 text-center shadow-xl py-[128px]">
                     <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2">Financing Available!</h3>
                     <p class="text-white/90 text-sm mb-6">Get Pre-Approved Today!</p>
                     <a href="#"
