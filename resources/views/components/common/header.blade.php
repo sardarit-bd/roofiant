@@ -172,6 +172,7 @@
                 </div>
             </div>
 
+            {{-- project page  --}}
             <a href="{{ route('project.index') }}" class="block text-gray-700 hover:text-blue-900 font-medium py-2">
                 Projects
             </a>
