@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/mycss.css') }}">
 </head>
 {{-- body  --}}
+
 <body>
     <div class="flex h-screen bg-gray-50">
         <!-- Desktop sidebar -->
