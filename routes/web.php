@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
@@ -57,6 +58,12 @@ Route::middleware(['auth', 'verified'])->prefix('dashboards')->group(function ()
     Route::delete('project-images/{image}', [ProjectController::class, 'deleteImage'])
         ->name('project-images.destroy');
 
+
+        // Settings
+
+          Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
+    Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
+
 });
 
 Route::middleware('auth')->group(function () {
@@ -64,6 +71,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
