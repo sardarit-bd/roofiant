@@ -13,9 +13,10 @@ class BlogController extends Controller
     // Display all blogs
     public function index()
     {
-        $blogs = Blog::with('user')->get(); // include user info
+        $blogs = Blog::with('user')->get();
+        $feature = Blog::first();
 
-        return view('pages.blogs.index', compact('blogs'));
+        return view('pages.blogs.index', compact('blogs', 'feature'));
     }
 
     public function myblog()

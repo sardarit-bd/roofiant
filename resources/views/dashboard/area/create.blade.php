@@ -3,20 +3,20 @@
     {{-- Page Header --}}
     <div class="mb-8 flex items-center gap-4">
         <a href="{{ route('admin.area.index') }}"
-            class="p-2 rounded-xl text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-200 transition-colors">
+            class="p-2 rounded-xl text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
             </svg>
         </a>
         <div>
-            <h2 class="text-2xl font-semibold text-gray-700 ">Create Area</h2>
+            <h2 class="text-2xl font-semibold text-gray-700">Create Area</h2>
             <p class="mt-0.5 text-sm text-gray-500">Add a new service area to the system</p>
         </div>
     </div>
 
     {{-- Validation Errors --}}
     @if ($errors->any())
-        <div class="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-xl">
+        <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
             <div class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-red-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"
                     viewBox="0 0 24 24">
@@ -24,9 +24,8 @@
                         d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
                 </svg>
                 <div>
-                    <p class="text-sm font-medium text-red-700 dark:text-red-400 mb-1">Please fix the following errors:
-                    </p>
-                    <ul class="text-sm text-red-600 dark:text-red-300 space-y-0.5 list-disc list-inside">
+                    <p class="text-sm font-medium text-red-700 mb-1">Please fix the following errors:</p>
+                    <ul class="text-sm text-red-600 space-y-0.5 list-disc list-inside">
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
                         @endforeach
@@ -44,10 +43,9 @@
 
             {{-- LEFT: Fields --}}
             <div class="lg:col-span-2">
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm p-6 space-y-5">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 space-y-5">
 
-                    <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-200 flex items-center gap-2">
+                    <h3 class="text-sm font-semibold text-gray-700 flex items-center gap-2">
                         <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -60,12 +58,12 @@
 
                     {{-- Name --}}
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1.5">
+                        <label for="name" class="block text-sm font-medium text-gray-600 mb-1.5">
                             Name <span class="text-red-500">*</span>
                         </label>
                         <input type="text" id="name" name="name" value="{{ old('name') }}"
                             placeholder="e.g. Downtown Manhattan"
-                            class="w-full px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border @error('name') border-red-400 dark:border-red-500 @else border-gray-200 dark:border-gray-600 @enderror rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition" />
+                            class="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 border @error('name') border-red-400 @else border-gray-200 @enderror rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition" />
                         @error('name')
                             <p class="mt-1.5 text-xs text-red-500 flex items-center gap-1">
                                 <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -80,21 +78,20 @@
 
                     {{-- Slug --}}
                     <div>
-                        <label for="slug" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1.5">
+                        <label for="slug" class="block text-sm font-medium text-gray-600 mb-1.5">
                             Slug
-                            <span
-                                class="ml-1 text-xs font-normal text-gray-400 dark:text-gray-500">(auto-generated)</span>
+                            <span class="ml-1 text-xs font-normal text-gray-400">(auto-generated)</span>
                         </label>
                         <div class="relative">
                             <span
-                                class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400 dark:text-gray-500 text-sm select-none pointer-events-none">
+                                class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400 text-sm select-none pointer-events-none">
                                 /areas/
                             </span>
                             <input type="text" id="slug" name="slug" value="{{ old('slug') }}"
                                 placeholder="downtown-manhattan"
-                                class="w-full pl-16 pr-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border @error('slug') border-red-400 dark:border-red-500 @else border-gray-200 dark:border-gray-600 @enderror rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent font-mono transition" />
+                                class="w-full pl-16 pr-4 py-2.5 text-sm text-gray-700 bg-gray-50 border @error('slug') border-red-400 @else border-gray-200 @enderror rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent font-mono transition" />
                         </div>
-                        <p class="mt-1.5 text-xs text-gray-400 dark:text-gray-500">
+                        <p class="mt-1.5 text-xs text-gray-400">
                             Leave blank to auto-generate from the name. Used in URLs.
                         </p>
                         @error('slug')
@@ -111,12 +108,12 @@
 
                     {{-- Address --}}
                     <div>
-                        <label for="address" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1.5">
+                        <label for="address" class="block text-sm font-medium text-gray-600 mb-1.5">
                             Address
-                            <span class="ml-1 text-xs font-normal text-gray-400 dark:text-gray-500">(optional)</span>
+                            <span class="ml-1 text-xs font-normal text-gray-400">(optional)</span>
                         </label>
                         <textarea id="address" name="address" rows="3" placeholder="e.g. 123 Main Street, New York, NY 10001"
-                            class="w-full px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border @error('address') border-red-400 dark:border-red-500 @else border-gray-200 dark:border-gray-600 @enderror rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent resize-none transition leading-relaxed">{{ old('address') }}</textarea>
+                            class="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 border @error('address') border-red-400 @else border-gray-200 @enderror rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent resize-none transition leading-relaxed">{{ old('address') }}</textarea>
                         @error('address')
                             <p class="mt-1.5 text-xs text-red-500 flex items-center gap-1">
                                 <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -136,9 +133,8 @@
             <div class="space-y-4">
 
                 {{-- Save Card --}}
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm p-6">
-                    <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-4 flex items-center gap-2">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+                    <h3 class="text-sm font-semibold text-gray-700 mb-4 flex items-center gap-2">
                         <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -159,15 +155,14 @@
                         </button>
 
                         <a href="{{ route('admin.area.index') }}"
-                            class="w-full flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-xl transition-colors duration-150">
+                            class="w-full flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors duration-150">
                             Cancel
                         </a>
                     </div>
                 </div>
 
                 {{-- Info Card --}}
-                <div
-                    class="bg-indigo-50 dark:bg-indigo-900/20 rounded-2xl border border-indigo-100 dark:border-indigo-800 p-5">
+                <div class="bg-indigo-50 rounded-2xl border border-indigo-100 p-5">
                     <div class="flex items-start gap-3">
                         <svg class="w-5 h-5 text-indigo-500 mt-0.5 shrink-0" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">

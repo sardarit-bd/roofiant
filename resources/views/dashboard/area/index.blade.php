@@ -2,16 +2,14 @@
 
     {{-- Page Header --}}
     <div class="mb-8">
-        <h2 class="text-2xl font-semibold text-gray-700 ">
-            Areas
-        </h2>
-        <p class="mt-1 text-sm text-gray-500 ">Manage service areas and their linked projects</p>
+        <h2 class="text-2xl font-semibold text-gray-700">Areas</h2>
+        <p class="mt-1 text-sm text-gray-500">Manage service areas and their linked projects</p>
     </div>
 
     {{-- Flash Success --}}
     @if (session('success'))
         <div
-            class="mb-6 flex items-center gap-3 p-4 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-700 rounded-xl text-sm text-emerald-700 dark:text-emerald-300">
+            class="mb-6 flex items-center gap-3 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-sm text-emerald-700">
             <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -20,7 +18,7 @@
         </div>
     @endif
 
-    {{-- Toolbar: Search (left) + Add Area (right) --}}
+    {{-- Toolbar --}}
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
 
         {{-- Search Bar --}}
@@ -32,7 +30,7 @@
                 </svg>
             </span>
             <input type="text" placeholder="Search areas..."
-                class="w-full pl-10 pr-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition" />
+                class="w-full pl-10 pr-4 py-2.5 text-sm text-gray-700 bg-white border border-gray-200 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition" />
         </div>
 
         {{-- Add Area Button --}}
@@ -46,44 +44,29 @@
     </div>
 
     {{-- Areas Table --}}
-    <div
-        class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
         <div class="overflow-x-auto">
             <table class="w-full text-sm text-left">
 
                 {{-- Table Head --}}
                 <thead>
-                    <tr class="bg-gray-50 dark:bg-gray-700/50 border-b border-gray-100 dark:border-gray-700">
-                        <th
-                            class="px-6 py-4 font-semibold text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 w-8">
-                            #
-                        </th>
-                        <th
-                            class="px-6 py-4 font-semibold text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                            Name
-                        </th>
-                        <th
-                            class="px-6 py-4 font-semibold text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                            Slug
-                        </th>
-                        <th
-                            class="px-6 py-4 font-semibold text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                            Address
-                        </th>
-                        <th
-                            class="px-6 py-4 font-semibold text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 text-center">
-                            Actions
-                        </th>
+                    <tr class="bg-gray-50 border-b border-gray-100">
+                        <th class="px-6 py-4 font-semibold text-xs uppercase tracking-wider text-gray-500 w-8">#</th>
+                        <th class="px-6 py-4 font-semibold text-xs uppercase tracking-wider text-gray-500">Name</th>
+                        <th class="px-6 py-4 font-semibold text-xs uppercase tracking-wider text-gray-500">Slug</th>
+                        <th class="px-6 py-4 font-semibold text-xs uppercase tracking-wider text-gray-500">Address</th>
+                        <th class="px-6 py-4 font-semibold text-xs uppercase tracking-wider text-gray-500 text-center">
+                            Actions</th>
                     </tr>
                 </thead>
 
                 {{-- Table Body --}}
-                <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                <tbody class="divide-y divide-gray-100">
                     @forelse ($areas as $index => $area)
-                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors duration-100">
+                        <tr class="hover:bg-gray-50 transition-colors duration-100">
 
                             {{-- Row Number --}}
-                            <td class="px-6 py-4 text-gray-400 dark:text-gray-500 font-mono text-xs">
+                            <td class="px-6 py-4 text-gray-400 font-mono text-xs">
                                 {{ $areas->firstItem() + $index }}
                             </td>
 
@@ -91,7 +74,7 @@
                             <td class="px-6 py-4">
                                 <div class="flex items-center gap-3">
                                     <div
-                                        class="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center shrink-0">
+                                        class="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center shrink-0">
                                         <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor"
                                             stroke-width="2" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -100,33 +83,30 @@
                                                 d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                                         </svg>
                                     </div>
-                                    <span class="font-medium text-gray-800 dark:text-gray-100">
-                                        {{ $area->name }}
-                                    </span>
+                                    <span class="font-medium text-gray-800">{{ $area->name }}</span>
                                 </div>
                             </td>
 
                             {{-- Slug --}}
                             <td class="px-6 py-4">
                                 <span
-                                    class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-mono bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">
+                                    class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-mono bg-gray-100 text-gray-600">
                                     /{{ $area->slug }}
                                 </span>
                             </td>
 
                             {{-- Address --}}
-                            <td class="px-6 py-4 text-gray-500 dark:text-gray-400 max-w-xs">
-                                <span class="line-clamp-1">
-                                    {{ $area->address ?? '—' }}
-                                </span>
+                            <td class="px-6 py-4 text-gray-500 max-w-xs">
+                                <span class="line-clamp-1">{{ $area->address ?? '—' }}</span>
                             </td>
+
                             {{-- Actions --}}
                             <td class="px-6 py-4">
                                 <div class="flex items-center justify-center gap-2">
 
                                     {{-- Edit --}}
-                                    <a href=""
-                                        class="p-1.5 rounded-lg text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors"
+                                    <a href="{{ route('areas.edit', $area) }}"
+                                        class="p-1.5 rounded-lg text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
                                         title="Edit">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                                             viewBox="0 0 24 24">
@@ -141,7 +121,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit"
-                                            class="p-1.5 rounded-lg text-gray-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/30 transition-colors"
+                                            class="p-1.5 rounded-lg text-gray-400 hover:text-red-600 hover:bg-red-50 transition-colors"
                                             title="Delete">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                                                 viewBox="0 0 24 24">
@@ -157,8 +137,8 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="7" class="px-6 py-16 text-center">
-                                <div class="flex flex-col items-center gap-3 text-gray-400 dark:text-gray-500">
+                            <td colspan="5" class="px-6 py-16 text-center">
+                                <div class="flex flex-col items-center gap-3 text-gray-400">
                                     <svg class="w-12 h-12 opacity-30" fill="none" stroke="currentColor"
                                         stroke-width="1.5" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -169,7 +149,7 @@
                                     <p class="text-sm font-medium">No areas found</p>
                                     <p class="text-xs">Start by adding your first service area.</p>
                                     <a href="{{ route('areas.create') }}"
-                                        class="mt-2 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-700 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors">
+                                        class="mt-2 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-indigo-600 border border-indigo-200 rounded-lg hover:bg-indigo-50 transition-colors">
                                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor"
                                             stroke-width="2.5" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -187,7 +167,7 @@
 
         {{-- Pagination --}}
         @if ($areas->hasPages())
-            <div class="px-6 py-4 border-t border-gray-100 dark:border-gray-700">
+            <div class="px-6 py-4 border-t border-gray-100">
                 {{ $areas->links() }}
             </div>
         @endif

@@ -58,10 +58,9 @@ Route::middleware(['auth', 'verified'])->prefix('dashboards')->group(function ()
     Route::delete('project-images/{image}', [ProjectController::class, 'deleteImage'])
         ->name('project-images.destroy');
 
+    // Settings
 
-        // Settings
-
-          Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
+    Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
     Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
 
 });
@@ -71,10 +70,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -189,7 +184,5 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
     Route::delete('/teams/{team}', [TeamController::class, 'destroyTeam'])->name('teams.destroy');
 
 });
-
-
 
 require __DIR__.'/auth.php';
