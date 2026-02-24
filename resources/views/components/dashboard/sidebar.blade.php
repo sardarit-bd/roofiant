@@ -1,5 +1,5 @@
 <aside id="sidebar"
-    class="z-20 hidden w-64 overflow-y-auto bg-slate-900 border-r border-white/10 md:block flex-shrink-0">
+    class="z-20 hidden w-64 overflow-y-auto bg-bl border-r border-white/10 md:block flex-shrink-0">
     <div class="py-4">
 
         {{-- Logo --}}
