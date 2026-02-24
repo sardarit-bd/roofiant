@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProjectImage extends Model
 {
-
     protected $table = 'project_images';
 
     protected $fillable = [
@@ -19,4 +18,8 @@ class ProjectImage extends Model
         return $this->belongsTo(Project::class);
     }
 
+    public function getImageAttribute($image)
+    {
+        return asset('storage/'.$image);
+    }
 }
