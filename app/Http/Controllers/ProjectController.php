@@ -24,6 +24,16 @@ class ProjectController extends Controller
         return view('dashboard.projects.index', compact('projects'));
     }
 
+    public function front_index()
+    {
+        $projects = Project::with(['area', 'images'])
+            ->withCount(['images', 'services'])
+            ->latest()
+            ->paginate(12);
+
+        return view('pages.project.index', compact('projects'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -44,7 +54,7 @@ class ProjectController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'area_id' => ['required', 'integer', 'exists:areas,id'],
             'client' => ['nullable', 'string', 'max:255'],
-            'deadline' => ['nullable', 'date'],
+            'deadline' => ['nullable'],
             'content' => ['nullable', 'string'],
             'type' => ['nullable', 'string', 'max:255'],
             'warranty' => ['nullable', 'string', 'max:255'],
@@ -55,9 +65,18 @@ class ProjectController extends Controller
             'images.*' => ['image', 'mimes:jpeg,jpg,png,webp', 'max:2048'],
         ]);
 
+        $slug = \Str::slug($validated['title']);
+        $count = 1;
+        while (Project::where('slug', $slug)->exists()) {
+            $slug = "{$slug}-{$count}";
+            $count++;
+        }
+        $validated['slug'] = $slug;
+
         // Create project
         $project = Project::create([
             'title' => $validated['title'],
+            'slug' => $validated['slug'],
             'area_id' => $validated['area_id'],
             'client' => $validated['client'] ?? null,
             'deadline' => $validated['deadline'] ?? null,
@@ -84,7 +103,7 @@ class ProjectController extends Controller
         }
 
         return redirect()
-            ->route('projects.show', $project)
+            ->route('projects.index', $project)
             ->with('success', "Project \"{$project->title}\" created successfully.");
     }
 
@@ -174,5 +193,12 @@ class ProjectController extends Controller
         $image->delete();
 
         return back()->with('success', 'Image deleted successfully.');
+    }
+
+    public function details($slug)
+    {
+        $project = Project::with(['services', 'images', 'area'])->where('slug', $slug)->firstOrFail();
+
+        return view('pages.project.details', compact('project'));
     }
 }

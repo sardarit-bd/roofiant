@@ -29,7 +29,7 @@
         <div class="flex flex-col flex-1 w-full min-w-0 overflow-hidden">
 
             <!-- Header -->
-            <header class="z-10 h-16 bg-slate-900 shadow-md shrink-0">
+            <header class="z-10 h-16 bg-bl shadow-md shrink-0">
                 <div class="flex items-center justify-between h-full px-6">
 
                     <!-- Mobile hamburger -->

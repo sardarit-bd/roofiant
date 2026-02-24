@@ -1,4 +1,4 @@
-div<x-dashboard-layout>
+<x-dashboard-layout>
 
     {{-- Page Header --}}
     <div class="mb-8 flex items-center gap-4">

@@ -86,7 +86,7 @@ class AreaserviceController extends Controller
         $areas = Area::orderBy('name')->get();
         $services = Service::orderBy('name')->get();
 
-        return view('area-services.edit', compact('areaService', 'areas', 'services'));
+        return view('dashboard.area-services.edit', compact('areaService', 'areas', 'services'));
     }
 
     /**
