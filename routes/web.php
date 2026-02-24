@@ -137,15 +137,10 @@ Route::prefix('blogs')->name('blogs.')->group(function () {
 */
 Route::prefix('project')->name('project.')->group(function () {
 
-    Route::get('/', function () {
-        return view('pages.project.index');
-    })->name('index');
+    Route::get('/',[ProjectController::class,'front_index'])->name('index');
 
-    Route::get('/details', function () {
-        return view('pages.project.details');
-    })->name('details');
+    Route::get('/{slug}',[ProjectController::class,'details'])->name('details');
 });
-
 /*
 |--------------------------------------------------------------------------
 | Services Section
