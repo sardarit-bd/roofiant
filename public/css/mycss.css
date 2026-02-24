@@ -44,3 +44,7 @@ body {
 .headbtn {
     padding-right: 50px;
 }
+
+.bg-bl {
+    background: rgb(2, 2, 114);
+}

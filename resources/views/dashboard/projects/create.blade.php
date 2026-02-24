@@ -9,14 +9,14 @@
             </svg>
         </a>
         <div>
-            <h2 class="text-2xl font-semibold text-gray-700 ">Create Project</h2>
-            <p class="mt-0.5 text-sm text-gray-500 ">Add a new project to your portfolio</p>
+            <h2 class="text-2xl font-semibold text-gray-700">Create Project</h2>
+            <p class="mt-0.5 text-sm text-gray-500">Add a new project to your portfolio</p>
         </div>
     </div>
 
     {{-- Validation Errors --}}
     @if ($errors->any())
-        <div class="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-xl">
+        <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
             <div class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-red-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"
                     viewBox="0 0 24 24">
@@ -24,9 +24,8 @@
                         d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
                 </svg>
                 <div>
-                    <p class="text-sm font-medium text-red-700 dark:text-red-400 mb-1">Please fix the following errors:
-                    </p>
-                    <ul class="text-sm text-red-600 dark:text-red-300 space-y-0.5 list-disc list-inside">
+                    <p class="text-sm font-medium text-red-700 mb-1">Please fix the following errors:</p>
+                    <ul class="text-sm text-red-600 space-y-0.5 list-disc list-inside">
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
                         @endforeach
@@ -46,9 +45,8 @@
             <div class="lg:col-span-2 space-y-6">
 
                 {{-- Basic Info --}}
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm p-6 space-y-5">
-                    <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-200 flex items-center gap-2">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 space-y-5">
+                    <h3 class="text-sm font-semibold text-gray-700 flex items-center gap-2">
                         <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -59,12 +57,12 @@
 
                     {{-- Title --}}
                     <div>
-                        <label for="title" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1.5">
+                        <label for="title" class="block text-sm font-medium text-gray-600 mb-1.5">
                             Project Title <span class="text-red-500">*</span>
                         </label>
                         <input type="text" id="title" name="title" value="{{ old('title') }}"
                             placeholder="e.g. Modern Office Renovation"
-                            class="w-full px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border @error('title') border-red-400 @else border-gray-200 dark:border-gray-600 @enderror rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
+                            class="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 border @error('title') border-red-400 @else border-gray-200 @enderror rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
                         @error('title')
                             <p class="mt-1.5 text-xs text-red-500">{{ $message }}</p>
                         @enderror
@@ -73,73 +71,120 @@
                     {{-- Client & Type Row --}}
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label for="client"
-                                class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1.5">
+                            <label for="client" class="block text-sm font-medium text-gray-600 mb-1.5">
                                 Client Name
                             </label>
                             <input type="text" id="client" name="client" value="{{ old('client') }}"
                                 placeholder="e.g. ABC Corporation"
-                                class="w-full px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
+                                class="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
                         </div>
 
                         <div>
-                            <label for="type"
-                                class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1.5">
+                            <label for="type" class="block text-sm font-medium text-gray-600 mb-1.5">
                                 Project Type
                             </label>
                             <input type="text" id="type" name="type" value="{{ old('type') }}"
                                 placeholder="e.g. Commercial, Residential"
-                                class="w-full px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
+                                class="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
                         </div>
                     </div>
 
                     {{-- Size, Warranty, Deadline Row --}}
                     <div class="grid grid-cols-3 gap-4">
                         <div>
-                            <label for="size"
-                                class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1.5">
+                            <label for="size" class="block text-sm font-medium text-gray-600 mb-1.5">
                                 Size
                             </label>
                             <input type="text" id="size" name="size" value="{{ old('size') }}"
                                 placeholder="e.g. 2500 sq ft"
-                                class="w-full px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
+                                class="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
                         </div>
 
                         <div>
-                            <label for="warranty"
-                                class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1.5">
+                            <label for="warranty" class="block text-sm font-medium text-gray-600 mb-1.5">
                                 Warranty
                             </label>
                             <input type="text" id="warranty" name="warranty" value="{{ old('warranty') }}"
                                 placeholder="e.g. 2 years"
-                                class="w-full px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
+                                class="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
                         </div>
 
                         <div>
-                            <label for="deadline"
-                                class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1.5">
-                                Deadline
+                            <label for="deadline" class="block text-sm font-medium text-gray-600 mb-1.5">
+                                Duration
                             </label>
-                            <input type="date" id="deadline" name="deadline" value="{{ old('deadline') }}"
-                                class="w-full px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
+                            <input type="text" id="deadline" name="deadline" value="{{ old('deadline') }}"
+                                class="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
                         </div>
                     </div>
 
-                    {{-- Content --}}
+                    {{-- Description (Quill Editor) --}}
                     <div>
-                        <label for="content" class="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1.5">
+                        <label class="block text-sm font-medium text-gray-600 mb-1.5">
                             Description
                         </label>
-                        <textarea id="content" name="content" rows="6"
-                            placeholder="Describe the project details, scope, and achievements..."
-                            class="w-full px-4 py-3 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 resize-none transition leading-relaxed">{{ old('content') }}</textarea>
+
+                        {{-- Editor Wrapper --}}
+                        <div class="rounded-xl overflow-hidden border border-gray-200">
+
+                            {{-- Toolbar --}}
+                            <div id="quill-toolbar"
+                                class="bg-gray-50 border-b border-gray-200 px-2 py-1 flex flex-wrap items-center gap-0.5">
+
+                                <select class="ql-header" title="Heading">
+                                    <option value="1">H1</option>
+                                    <option value="2">H2</option>
+                                    <option value="3">H3</option>
+                                    <option value="4">H4</option>
+                                    <option selected>Normal</option>
+                                </select>
+
+                                <div class="w-px h-5 bg-gray-200 mx-1"></div>
+
+                                <button class="ql-bold" title="Bold"></button>
+                                <button class="ql-italic" title="Italic"></button>
+                                <button class="ql-underline" title="Underline"></button>
+                                <button class="ql-strike" title="Strikethrough"></button>
+
+                                <div class="w-px h-5 bg-gray-200 mx-1"></div>
+
+                                <button class="ql-list" value="ordered" title="Ordered list"></button>
+                                <button class="ql-list" value="bullet" title="Bullet list"></button>
+
+                                <div class="w-px h-5 bg-gray-200 mx-1"></div>
+
+                                <select class="ql-align" title="Alignment">
+                                    <option selected></option>
+                                    <option value="center"></option>
+                                    <option value="right"></option>
+                                    <option value="justify"></option>
+                                </select>
+
+                                <div class="w-px h-5 bg-gray-200 mx-1"></div>
+
+                                <button class="ql-blockquote" title="Blockquote"></button>
+                                <button class="ql-code-block" title="Code block"></button>
+                                <button class="ql-link" title="Insert link"></button>
+
+                                <div class="w-px h-5 bg-gray-200 mx-1"></div>
+
+                                <button class="ql-clean" title="Clear formatting"></button>
+                            </div>
+
+                            {{-- Quill mounts here --}}
+                            <div id="quill-editor"
+                                class="min-h-[240px] max-h-[500px] overflow-y-auto bg-white text-gray-700 text-sm leading-relaxed px-1">
+                            </div>
+                        </div>
+
+                        {{-- Hidden textarea synced before submit --}}
+                        <textarea id="content" name="content" class="hidden">{{ old('content') }}</textarea>
                     </div>
                 </div>
 
                 {{-- Images Upload --}}
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm p-6">
-                    <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-4 flex items-center gap-2">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+                    <h3 class="text-sm font-semibold text-gray-700 mb-4 flex items-center gap-2">
                         <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -148,18 +193,15 @@
                         Project Images (Max 10)
                     </h3>
 
-                    <input type="file" id="images" name="images[]" multiple accept="image/*"
-                        class="hidden" />
+                    <input type="file" id="images" name="images[]" multiple accept="image/*" class="hidden" />
                     <label for="images"
-                        class="group flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-gray-200 dark:border-gray-600 rounded-xl cursor-pointer bg-gray-50 dark:bg-gray-700/30 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 hover:border-indigo-300 dark:hover:border-indigo-600 transition-all">
+                        class="group flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer bg-gray-50 hover:bg-indigo-50 hover:border-indigo-300 transition-all">
                         <svg class="w-10 h-10 text-gray-400 group-hover:text-indigo-500 transition-colors mb-2"
                             fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
                         </svg>
-                        <span
-                            class="text-sm text-gray-600 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Click
-                            to upload images</span>
+                        <span class="text-sm text-gray-600 group-hover:text-indigo-600 transition-colors">Click to upload images</span>
                         <span class="text-xs text-gray-400 mt-1">PNG, JPG, WEBP up to 2MB each</span>
                     </label>
 
@@ -172,9 +214,8 @@
             <div class="space-y-6">
 
                 {{-- Publish Card --}}
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm p-6">
-                    <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-4">Publish</h3>
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+                    <h3 class="text-sm font-semibold text-gray-700 mb-4">Publish</h3>
                     <div class="space-y-3">
                         <button type="submit"
                             class="w-full flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-colors">
@@ -186,16 +227,15 @@
                             Create Project
                         </button>
                         <a href="{{ route('projects.index') }}"
-                            class="w-full flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-xl transition-colors">
+                            class="w-full flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors">
                             Cancel
                         </a>
                     </div>
                 </div>
 
                 {{-- Area --}}
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm p-6">
-                    <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-4 flex items-center gap-2">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+                    <h3 class="text-sm font-semibold text-gray-700 mb-4 flex items-center gap-2">
                         <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -206,7 +246,7 @@
                         Area
                     </h3>
                     <select id="area_id" name="area_id"
-                        class="w-full px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700/50 border @error('area_id') border-red-400 @else border-gray-200 dark:border-gray-600 @enderror rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition appearance-none">
+                        class="w-full px-4 py-2.5 text-sm text-gray-700 bg-gray-50 border @error('area_id') border-red-400 @else border-gray-200 @enderror rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400 transition appearance-none">
                         <option value="">Select area</option>
                         @foreach ($areas as $area)
                             <option value="{{ $area->id }}" {{ old('area_id') == $area->id ? 'selected' : '' }}>
@@ -220,9 +260,8 @@
                 </div>
 
                 {{-- Services --}}
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm p-6">
-                    <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-4 flex items-center gap-2">
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+                    <h3 class="text-sm font-semibold text-gray-700 mb-4 flex items-center gap-2">
                         <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -232,15 +271,14 @@
                     </h3>
                     <div class="space-y-2 max-h-64 overflow-y-auto">
                         @forelse ($services as $service)
-                            <label
-                                class="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer transition-colors">
+                            <label class="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors">
                                 <input type="checkbox" name="services[]" value="{{ $service->id }}"
                                     {{ in_array($service->id, old('services', [])) ? 'checked' : '' }}
                                     class="w-4 h-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500" />
-                                <span class="text-sm text-gray-700 dark:text-gray-200">{{ $service->name }}</span>
+                                <span class="text-sm text-gray-700">{{ $service->name }}</span>
                             </label>
                         @empty
-                            <p class="text-xs text-gray-400 dark:text-gray-500 py-2">No services available</p>
+                            <p class="text-xs text-gray-400 py-2">No services available</p>
                         @endforelse
                     </div>
                 </div>
@@ -262,12 +300,11 @@
             container.innerHTML = '';
             container.classList.remove('hidden');
 
-            files.slice(0, 10).forEach((file, index) => {
+            files.slice(0, 10).forEach((file) => {
                 const reader = new FileReader();
                 reader.onload = (ev) => {
                     const div = document.createElement('div');
-                    div.className =
-                        'relative aspect-square rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700';
+                    div.className = 'relative aspect-square rounded-lg overflow-hidden bg-gray-100';
                     div.innerHTML = `
                         <img src="${ev.target.result}" class="w-full h-full object-cover"/>
                         <button type="button" onclick="this.closest('div').remove(); if(container.children.length === 0) container.classList.add('hidden');"
@@ -283,5 +320,81 @@
             });
         });
     </script>
+
+    {{-- Quill JS + Init --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const quill = new Quill('#quill-editor', {
+                theme: 'snow',
+                modules: { toolbar: '#quill-toolbar' },
+                placeholder: 'Describe the project details, scope, and achievements...',
+            });
+
+            // Restore old value on validation fail
+            const hiddenContent = document.getElementById('content');
+            if (hiddenContent.value.trim()) {
+                quill.root.innerHTML = hiddenContent.value;
+            }
+
+            // Sync to hidden textarea before form submits
+            const form = hiddenContent.closest('form');
+            if (form) {
+                form.addEventListener('formdata', () => {
+                    hiddenContent.value = quill.root.innerHTML;
+                });
+                form.addEventListener('submit', () => {
+                    hiddenContent.value = quill.root.innerHTML;
+                });
+            }
+        });
+    </script>
+
+    <style>
+        .ql-toolbar.ql-snow,
+        .ql-container.ql-snow {
+            border: none !important;
+        }
+
+        .ql-toolbar button:hover,
+        .ql-toolbar button.ql-active {
+            color: #6366f1 !important;
+        }
+
+        .ql-toolbar button:hover .ql-stroke,
+        .ql-toolbar button.ql-active .ql-stroke {
+            stroke: #6366f1 !important;
+        }
+
+        .ql-toolbar button:hover .ql-fill,
+        .ql-toolbar button.ql-active .ql-fill {
+            fill: #6366f1 !important;
+        }
+
+        .ql-toolbar .ql-picker-label:hover,
+        .ql-toolbar .ql-picker-label.ql-active {
+            color: #6366f1 !important;
+        }
+
+        .ql-editor.ql-blank::before {
+            color: #9ca3af;
+            font-style: normal;
+        }
+
+        .ql-editor pre.ql-syntax {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+            padding: 1rem;
+        }
+
+        .ql-editor blockquote {
+            border-left: 4px solid #6366f1;
+            padding-left: 1rem;
+            color: #6b7280;
+            font-style: italic;
+        }
+    </style>
 
 </x-dashboard-layout>
